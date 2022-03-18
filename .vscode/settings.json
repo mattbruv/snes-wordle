@@ -1,0 +1,13 @@
+{
+    "C_Cpp.default.includePath": [
+        "C:\\snesdev\\pvsneslib\\include"
+    ],
+    "files.associations": {
+        "*.s": "asm-intel-x86-generic",
+        "*.h": "c",
+    },
+    "python.formatting.provider": "yapf",
+    "files.watcherExclude": {
+        "**/target": true
+    }
+}

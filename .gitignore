@@ -1,0 +1,15 @@
+*.obj
+*.ps
+*.sfc
+*.sym
+linkfile
+data
+data.asm
+src/data.h
+__pycache__
+raw
+src/*.asm
+roms
+
+spriteData.c
+spriteData.h
