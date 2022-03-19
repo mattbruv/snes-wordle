@@ -5,16 +5,20 @@ from tools import GFX_TOOL, moveFilesToData
 
 defaultArgs = ["-pr", "-pc16", "-n", "-gs8", "-pe0", "-fbmp", "-m"]
 
-scrollingArgs = [
-    "-mR!", # No tile reduction (not advised)
+lettersArgs = [
     #"-pr",  # Rearrange palette, and preserve palette numbers in the tilemap
-    "-pc16",  # The number of colors to use: 16
     "-n",  # no border
     "-gs8",  # Size of image blocks in pixels: 8
-    "-pe0",  # The palette entry to add to map tiles (0 to 16)
-    "-fbmp",  # convert a bmp
-    "-mp",  # Convert the whole picture with high priority
-    "-m32p"  # Generate tile map organized in pages of 32x32 (good for scrolling)
+    "-po2"
+    "-pc16",  # The number of colors to use: 16
+    "-mR!", # No tile reduction (not advised)
+    "-m!",
+#    "-p!",
+
+#    "-pe0",  # The palette entry to add to map tiles (0 to 16)
+#    "-fbmp",  # convert a bmp
+#    "-mp",  # Convert the whole picture with high priority
+#    "-m32p"  # Generate tile map organized in pages of 32x32 (good for scrolling)
 ]
 
 # -pc4 = 4bpp
@@ -28,21 +32,9 @@ spriteArgs = "-gs16 -pc16 -po16 -n".split()
 
 graphics = [  #
     {
-        "glob": "backgrounds/*.bmp",
-        "args": defaultArgs
+        "glob": "backgrounds/letters/*.bmp",
+        "args": lettersArgs
     },  #
-    {
-        "glob": "backgrounds/static/*.bmp",
-        "args": defaultArgs
-    },
-    {
-        "glob": "backgrounds/scrolling/*.bmp",
-        "args": scrollingArgs
-    },  #
-    {
-        "glob": "sprites/fighters/**/*.bmp",
-        "args": spriteArgs
-    },
     {
         "glob": "fonts/*.bmp",
         "args": fontArgs

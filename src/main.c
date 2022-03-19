@@ -1,9 +1,6 @@
 #include <snes.h>
 
-#include "backgroundScroll.h"
-#include "vblank.h"
 #include "data.h"
-#include "sprite.h"
 
 // IMPORTANT:
 // Changing which pallette the BGs use is done via GFX compilation process
@@ -16,21 +13,18 @@ void main()
     dmaClearVram();
 
     // Initialize game engine data
-    initScrollBackgrounds();
-
     WaitForVBlank();
 
-    // Set up test game state
-    setScrollBackground();
+    // load BG letters
+    //bgInitTileSet(0, &gfx_letters_pic, &gfx_letters_pal, 0, gfx_letters_pic_size,
+    //             gfx_letters_pal_size, BG_4COLORS, 0x0000);
+    bgInitTileSet(0, &gfx_letters_pic, &gfx_letters_pal, 0, gfx_letters_pic_size,
+                  gfx_letters_pal_size, BG_4COLORS, 0x0000);
 
     setScreenOn();
 
-    initSprites();
-
     while (1)
     {
-        // scrollBGUpdate();
-        tickSprites();
         WaitForVBlank();
     }
 }
