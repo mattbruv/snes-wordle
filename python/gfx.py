@@ -9,16 +9,16 @@ lettersArgs = [
     #"-pr",  # Rearrange palette, and preserve palette numbers in the tilemap
     "-n",  # no border
     "-gs8",  # Size of image blocks in pixels: 8
-    "-po2"
+    "-po2",
     "-pc16",  # The number of colors to use: 16
-    "-mR!", # No tile reduction (not advised)
+    "-mR!",  # No tile reduction (not advised)
     "-m!",
-#    "-p!",
+    #    "-p!",
 
-#    "-pe0",  # The palette entry to add to map tiles (0 to 16)
-#    "-fbmp",  # convert a bmp
-#    "-mp",  # Convert the whole picture with high priority
-#    "-m32p"  # Generate tile map organized in pages of 32x32 (good for scrolling)
+    #    "-pe0",  # The palette entry to add to map tiles (0 to 16)
+    #    "-fbmp",  # convert a bmp
+    #    "-mp",  # Convert the whole picture with high priority
+    #    "-m32p"  # Generate tile map organized in pages of 32x32 (good for scrolling)
 ]
 
 # -pc4 = 4bpp
