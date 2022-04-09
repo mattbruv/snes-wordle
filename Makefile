@@ -8,7 +8,7 @@ include snes_rules.mk
  
 #---------------------------------------------------------------------------------
 # ROMNAME is used in snes_rules file
-export ROMNAME := fighter
+export ROMNAME := wordle
 
 all: $(ROMNAME).sfc
 

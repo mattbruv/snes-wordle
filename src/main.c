@@ -1,6 +1,7 @@
 #include <snes.h>
 
 #include "data.h"
+#include "background.h"
 
 // IMPORTANT:
 // Changing which pallette the BGs use is done via GFX compilation process
@@ -15,15 +16,7 @@ void main()
     // Initialize game engine data
     WaitForVBlank();
 
-    // load BG letters
-    //bgInitTileSet(0, &gfx_letters_pic, &gfx_letters_pal, 0, gfx_letters_pic_size,
-    //             gfx_letters_pal_size, BG_4COLORS, 0x0000);
-    bgInitTileSet(0, &gfx_letters_pic, &gfx_letters_pal, 0, gfx_letters_pic_size,
-                  gfx_letters_pal_size, BG_4COLORS, 0x0000);
-    WaitForVBlank();
-    bgInitTileSet(0, &gfx_tiles_pic, &gfx_tiles_pal, 0, gfx_tiles_pic_size,
-                  gfx_tiles_pal_size, BG_4COLORS, 0x1000);
-
+    loadTiles();
     setScreenOn();
 
     while (1)
